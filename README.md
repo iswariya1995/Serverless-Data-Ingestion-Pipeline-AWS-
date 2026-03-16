@@ -32,17 +32,14 @@ aws-serverless-data-pipeline/
 │
 ├── lambda/
 │   └── lambda_function.py
-│
 ├── scripts/
 │   └── upload_to_s3.py
-│
 ├── sql/
 │   └── schema.sql
-│
 ├── sample-data/
 │   └── customers.csv
-│
 └── README.md
+---
 ## Workflow
 
 1. Upload CSV file to an **S3 bucket**.
@@ -56,12 +53,12 @@ aws-serverless-data-pipeline/
 
 ## Sample CSV
 
-```csv
 id,first_name,last_name,email
 1,John,Doe,john.doe@example.com
 2,Jane,Smith,jane.smith@example.com
-3,Ahmed,Khan,ahmed.khan@example.com.
-## IAM Role for Lambda
+3,Ahmed,Khan,ahmed.khan@example.com
+
+---
 
 ### Required Policies
 
