@@ -7,7 +7,8 @@ Automatically processes CSV files uploaded to Amazon S3, inserts the data into A
 
 ## Architecture
 
-![AWS Serverless Pipeline](architecture-diagram.png) <!-- attach your diagram here -->
+![AWS Serverless Pipeline](images/architecture.png)
+
 
 ---
 
