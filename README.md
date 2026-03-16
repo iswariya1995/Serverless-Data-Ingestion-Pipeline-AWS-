@@ -11,10 +11,8 @@ Implement an **event-driven data ingestion pipeline** on AWS that automatically 
 ---
 
 ## 📂 Architecture Overview
+![image alt](https://github.com/iswariya1995/Serverless-Data-Ingestion-Pipeline-AWS-/blob/3cd2614f6259e8477efb5d649fffde3b5a7601e1/images.png)
 
-<p align="center">
-  <img src="./images/image_d766c0.png" alt="AWS Pipeline Architecture" width="500">
-</p>
 ### Services Used
 
 - **Amazon S3** – Store uploaded files.  
