@@ -13,7 +13,7 @@ Implement an **event-driven data ingestion pipeline** on AWS that automatically 
 ## 📂 Architecture Overview
 
 <p align="center">
-<img width="500" alt="EFS to S3 Architecture" src="https://github.com/user-attachments/assets/4eff33cf-5a89-4eaf-9a88-67ec428f2529" />
+  <img src="./7fa142d0-fb60-427e-b067-6829609ef29e.jpg" alt="AWS Architecture Diagram" width="600">
 </p>
 ### Services Used
 
