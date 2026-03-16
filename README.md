@@ -6,9 +6,9 @@ Automatically processes CSV files uploaded to Amazon S3, inserts the data into A
 ---
 
 ## Architecture
-## Architecture Diagram
 
-![Serverless Data Ingestion Pipeline](images/82fdc093-599b-476c-bb16-782bc0778475.png)
+![AWS Serverless Pipeline](architecture-diagram.png) <!-- attach your diagram here -->
+
 ---
 
 ## AWS Services Used
@@ -42,9 +42,6 @@ aws-serverless-data-pipeline/
 │   └── customers.csv
 │
 └── README.md
-
----
-
 ## Workflow
 
 1. Upload CSV file to an **S3 bucket**.
@@ -58,15 +55,19 @@ aws-serverless-data-pipeline/
 
 ## Sample CSV
 
-`customers.csv`
+```csv
+id,first_name,last_name,email
+1,John,Doe,john.doe@example.com
+2,Jane,Smith,jane.smith@example.com
+3,Ahmed,Khan,ahmed.khan@example.com.
 ## IAM Role for Lambda
 
 ### Required Policies
 
-- AmazonS3ReadOnlyAccess
-- AmazonRDSFullAccess
-- AmazonSNSFullAccess
-- AWSLambdaBasicExecutionRole
+- `AmazonS3ReadOnlyAccess`
+- `AmazonRDSFullAccess`
+- `AmazonSNSFullAccess`
+- `AWSLambdaBasicExecutionRole`
 
 ---
 
