@@ -12,7 +12,9 @@ Implement an **event-driven data ingestion pipeline** on AWS that automatically 
 
 ## 📂 Architecture Overview
 
-
+<p align="center">
+<img width="500" alt="EFS to S3 Architecture" src="https://github.com/user-attachments/assets/4eff33cf-5a89-4eaf-9a88-67ec428f2529" />
+</p>
 ### Services Used
 
 - **Amazon S3** – Store uploaded files.  
