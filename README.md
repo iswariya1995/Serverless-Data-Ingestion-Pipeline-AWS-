@@ -13,7 +13,7 @@ Implement an **event-driven data ingestion pipeline** on AWS that automatically 
 ## 📂 Architecture Overview
 
 <p align="center">
-  <img src="./7fa142d0-fb60-427e-b067-6829609ef29e.jpg" alt="AWS Architecture Diagram" width="600">
+  <img src="./images/architecture-diagram.jpg" alt="AWS Pipeline Architecture" width="800">
 </p>
 ### Services Used
 
