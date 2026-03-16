@@ -1,3 +1,64 @@
+# Serverless Data Ingestion Pipeline (AWS)
+
+An event-driven **serverless data ingestion pipeline** built on AWS.  
+Automatically processes CSV files uploaded to Amazon S3, inserts the data into Amazon RDS, sends notifications via Amazon SNS, and logs execution using CloudWatch.
+
+---
+
+## Architecture
+## Architecture Diagram
+
+![Serverless Data Ingestion Pipeline](images/82fdc093-599b-476c-bb16-782bc0778475.png)
+---
+
+## AWS Services Used
+
+| Service | Purpose |
+|--------|---------|
+| Amazon S3 | File storage for uploaded CSV files |
+| AWS Lambda | Serverless compute for processing CSV files |
+| Amazon RDS | Relational database storage |
+| Amazon SNS | Email notifications for success/failure |
+| Amazon CloudWatch | Logging and monitoring Lambda executions |
+| IAM | Secure access control |
+
+---
+
+## Project Structure
+
+```text
+aws-serverless-data-pipeline/
+│
+├── lambda/
+│   └── lambda_function.py
+│
+├── scripts/
+│   └── upload_to_s3.py
+│
+├── sql/
+│   └── schema.sql
+│
+├── sample-data/
+│   └── customers.csv
+│
+└── README.md
+
+---
+
+## Workflow
+
+1. Upload CSV file to an **S3 bucket**.
+2. **S3 event notification** triggers Lambda.
+3. Lambda downloads and parses the CSV.
+4. Lambda inserts records into the **RDS database**.
+5. Lambda triggers **SNS notification** (success/failure).
+6. Execution logs stored in **CloudWatch**.
+
+---
+
+## Sample CSV
+
+`customers.csv`
 ## IAM Role for Lambda
 
 ### Required Policies
