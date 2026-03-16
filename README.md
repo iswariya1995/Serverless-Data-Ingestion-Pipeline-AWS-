@@ -1,16 +1,11 @@
 # Serverless-Data-Ingestion-Pipeline-AWS-
-## Project Overview
+## Serverless Data Ingestion Pipeline (AWS)
 
-This project implements a serverless data ingestion pipeline using AWS services. 
-The system automatically processes files uploaded to Amazon S3 using AWS Lambda 
-and stores processed data in Amazon RDS.
+Designed and implemented an event-driven data ingestion architecture using AWS serverless services to automatically process uploaded files and store structured data in a relational database.
 
-The architecture is event-driven and scalable, eliminating the need to manage servers.
-## Technologies Used
+### Key Contributions
 
-- AWS Lambda
-- Amazon S3
-- Amazon RDS
-- IAM
-- CloudWatch
-- Python
+- Developed an automated data ingestion workflow using Amazon S3 and AWS Lambda
+- Implemented IAM role-based access control to enforce secure service interactions
+- Configured CloudWatch logging and monitoring for system observability
+- Enabled event-driven processing through S3 trigger notifications
