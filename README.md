@@ -1,64 +1,48 @@
-# Serverless Data Ingestion Pipeline (AWS)
+# Automated File Upload Pipeline: Local → S3 → Lambda → RDS → SNS
 
-An **event-driven serverless data ingestion pipeline** built on AWS.  
-Automatically processes CSV files uploaded to Amazon S3, inserts the data into Amazon RDS, sends notifications via Amazon SNS, and logs execution using CloudWatch.
+## 🌟 Objective
+Implement an **event-driven data ingestion pipeline** on AWS that automatically processes files uploaded from a local machine:
 
----
-
-## Architecture
-
-![AWS Serverless Pipeline](images/architecture.png)
-
----
-
-## AWS Services Used
-
-| Service | Purpose |
-|--------|---------|
-| Amazon S3 | File storage for uploaded CSV files |
-| AWS Lambda | Serverless compute for processing CSV files |
-| Amazon RDS | Relational database storage |
-| Amazon SNS | Email notifications for success/failure |
-| Amazon CloudWatch | Logging and monitoring Lambda executions |
-| IAM | Secure access control |
+1. Upload to an **S3 bucket**.  
+2. Processed by an **AWS Lambda function**.  
+3. Inserted into an **RDS database**.  
+4. Triggers an **SNS notification** on success or failure.  
 
 ---
 
-## Project Structure
+## 📂 Architecture Overview
 
-```text
-aws-serverless-data-pipeline/
-│
-├── lambda/
-│   └── lambda_function.py        # Lambda function to process CSV
-├── scripts/
-│   └── upload_to_s3.py           # Script to upload CSV files to S3
-├── sql/
-│   └── schema.sql                # RDS database schema
-├── sample-data/
-│   └── customers.csv             # Sample CSV file
-└── README.md                     # Project documentation
+### Services Used
+
+- **Amazon S3** – Store uploaded files.  
+- **AWS Lambda** – Serverless compute for processing files.  
+- **Amazon RDS** – Relational database (PostgreSQL or MySQL).  
+- **Amazon SNS** – Email notifications for success/failure.  
+- **Amazon CloudWatch** – Logging and monitoring.  
+- **IAM** – Role and policy management for secure access.  
 
 ---
 
-## Workflow
+## 🔄 Workflow
 
-1. Upload a CSV file to an **S3 bucket**.  
-2. **S3 event notification** triggers the Lambda function.  
-3. Lambda downloads and parses the CSV file.  
-4. Lambda inserts records into the **RDS database**.  
-5. Lambda triggers **SNS notification** for success or failure.  
-6. Execution logs are stored in **CloudWatch**.
+1. CSV file uploaded to an S3 bucket from a local machine.  
+2. S3 event triggers the Lambda function.  
+3. Lambda reads and parses the CSV, connecting to RDS.  
+4. Data inserted into a **customers** table in RDS.  
+5. SNS sends success or failure notification.  
+6. CloudWatch logs Lambda activity for auditing and debugging.  
 
 ---
 
-## Sample CSV
+## 📅 Use Case
 
-```csv
-id,first_name,last_name,email
-1,John,Doe,john.doe@example.com
-2,Jane,Smith,jane.smith@example.com
-3,Ahmed,Khan,ahmed.khan@example.com
+Ideal for organizations receiving remote data (e.g., customer orders, product listings) that must be automatically ingested into backend databases for:
+
+- Analytics  
+- Reporting  
+- CRM synchronization  
+
+---
 
 ---
 
