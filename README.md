@@ -1,4 +1,4 @@
-# Automated File Upload Pipeline: Local → S3 → Lambda → RDS → SNS
+# # Serverless Data Ingestion Pipeline (AWS)
 
 ## 🌟 Objective
 Implement an **event-driven data ingestion pipeline** on AWS that automatically processes files uploaded from a local machine:
@@ -11,6 +11,7 @@ Implement an **event-driven data ingestion pipeline** on AWS that automatically 
 ---
 
 ## 📂 Architecture Overview
+
 
 ### Services Used
 
