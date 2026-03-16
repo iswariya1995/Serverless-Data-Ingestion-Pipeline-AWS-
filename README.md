@@ -44,8 +44,6 @@ Ideal for organizations receiving remote data (e.g., customer orders, product li
 
 ---
 
----
-
 ## Required IAM Policies
 
 - `AmazonS3ReadOnlyAccess`  
